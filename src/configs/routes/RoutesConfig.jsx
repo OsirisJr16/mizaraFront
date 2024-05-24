@@ -1,8 +1,9 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 
+const __MAIN__ = lazy(() => import("../../pages/main/Main"));
+
 const RoutesConfig = () => {
-  const __MAIN__ = lazy(() => import("../../pages/main/Main"));
   return (
     <>
       <Suspense>
