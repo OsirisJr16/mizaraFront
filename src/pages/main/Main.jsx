@@ -1,9 +1,9 @@
-import Header from "../header/Header";
-
+import ListUser from "../listuser/ListUser";
 const Main = () => {
   return (
     <div>
-      <Header/>
+      <p className="text-7xl">Main</p>
+      <ListUser />
     </div>
   );
 };
