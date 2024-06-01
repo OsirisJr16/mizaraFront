@@ -27,9 +27,9 @@ const ListUser = () => {
           placeholder="Recherche"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="flex-1 rounded-lg border border-gray-300 p-2"
+          className="flex-1 rounded-lg border border-gray-300 p-2 text-lg"
         />
-        <FaSearch className="ml-2 cursor-pointer text-gray-500" />
+        <FaSearch className="ml-2 cursor-pointer text-gray-500 text-lg" />
       </div>
 
       {/* User informations */}
@@ -38,9 +38,9 @@ const ListUser = () => {
           filteredUsers.map(user => (
             <div key={user.id} className="relative mb-4 flex items-center space-x-4 rounded-lg bg-gray-100 p-2 shadow-sm">
               <div className="relative">
-                <div className={`absolute -right-1.5 -top-1 size-3 rounded-full ${user.online ? 'bg-green-500' : 'bg-gray-500'}`}></div>
-                <div className="flex size-10 items-center justify-center rounded-full bg-gray-300">
-                  <img src={user.avatar_path} alt="Avatar" className="size-10 rounded-full" />
+                <div className={`absolute -right-1.5 -top-1 w-3 h-3 rounded-full ${user.online ? 'bg-green-500' : 'bg-gray-500'}`}></div>
+                <div className="flex w-10 h-10 items-center justify-center rounded-full bg-gray-300">
+                  <img src={user.avatar_path} alt="Avatar" className="w-10 h-10 rounded-full" />
                 </div>
               </div>
               <div className="min-w-0 flex-1">
@@ -51,7 +51,7 @@ const ListUser = () => {
               {/* Ellipsis Button */}
               <div className="relative">
                 <button className="text-gray-500">
-                  <FiMoreVertical />
+                  <FiMoreVertical className="text-lg"/>
                 </button>
               </div>
             </div>
