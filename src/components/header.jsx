@@ -8,6 +8,7 @@ export default function Header() {
         <nav className="bg-white border-gray-200 fixed w-full z-10 shadow-md">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a className="flex items-center space-x-3">
+              <img src="./favicon.ico" className="h-8"/>
               <span className="self-center text-2xl font-semibold whitespace-nowrap ">
                 Mi-Zara
               </span>
