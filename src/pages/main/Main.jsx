@@ -1,8 +1,15 @@
+import MainLayout from "../../layout/mainlayout/MainLayout.jsx"
+
+
+// List User + Header ==> Main Layout ==> Main.jsx
 const Main = () => {
   return (
-    <div>
-      <p className="text-7xl">Main</p>
-    </div>
+    <>
+      <div>
+        <MainLayout />
+      </div>
+    </>
+   
   );
 };
 
