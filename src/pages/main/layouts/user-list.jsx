@@ -59,7 +59,7 @@ export default function UserList() {
   return (
     <>
       <div className="relative isolate  lg:px-8">
-        <div className="h-screen w-full rounded-lg bg-white p-4 shadow-lg">
+        <div className="h-screen w-full rounded-lg bg-white p-4 shadow-lg  dark:bg-zinc-800">
           <div className="mb-4">
             <label
               htmlFor="search"
@@ -71,7 +71,7 @@ export default function UserList() {
               <input
                 type="search"
                 id="search"
-                className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg "
+                className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg  dark:bg-zinc-800 dark:text-zinc-300 "
                 placeholder="Search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -82,9 +82,9 @@ export default function UserList() {
               </button>
             </div>
           </div>
-          <div className="rounded-lg bg-white p-1">
+          <div className="rounded-lg bg-white p-1 dark:bg-zinc-800">
             {filteredUsers.length > 0 ? (
-              <VStack spacing={4} align="stretch">
+              <VStack  spacing={4} align="stretch">
                 {filteredUsers.map((user, index) => (
                   <Flex key={index}>
                     <Avatar src={user.avatar_path}>
@@ -93,8 +93,8 @@ export default function UserList() {
                       )}
                     </Avatar>
                     <Box ml="3">
-                      <Text fontWeight="bold">{user.name}</Text>
-                      <Text fontSize="sm">{user.device}</Text>
+                      <Text fontWeight="bold" className="dark:text-zinc-200">{user.name}</Text>
+                      <Text fontSize="sm" className="dark:text-zinc-400">{user.device}</Text>
                     </Box>
                     <Box ml="auto" mr="-2">
                       <FiMoreVertical />
@@ -103,7 +103,7 @@ export default function UserList() {
                 ))}
               </VStack>
             ) : (
-              <div className="text-center text-red-700">No user found!</div>
+              <div className="text-center text-red-700  dark:text-zinc-200">No user found!</div>
             )}
           </div>
         </div>
