@@ -13,12 +13,6 @@
     font-family: "SuperTitle";
   }
 
-  body.dark {
-    background-color: #000;
-    transition: background-color 0.2s;
-    transition-duration: 0.2s;
-  }
-
   @font-face {
     font-family: "Nunito";
     font-style: normal;
@@ -62,9 +56,11 @@
     border-radius: 4px;
     opacity: 0.1;
   }
+
   body.dark *::-webkit-scrollbar-corner {
     border-radius: 20px;
   }
+
   body.dark *::-webkit-scrollbar {
     padding: 20px 0px;
     background: rgb(56, 56, 56);

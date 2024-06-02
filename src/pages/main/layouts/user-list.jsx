@@ -1,15 +1,14 @@
-import { useState } from "react";
+import { Search2Icon } from "@chakra-ui/icons";
 import {
   Avatar,
+  AvatarBadge,
   Box,
   Flex,
   Text,
-  VStack,
-  Badge,
-  AvatarBadge,
+  VStack
 } from "@chakra-ui/react";
+import { useState } from "react";
 import { FiMoreVertical } from "react-icons/fi";
-import { Search2Icon } from "@chakra-ui/icons";
 
 const users = [
   {
@@ -63,7 +62,7 @@ export default function UserList() {
           <div className="mb-4">
             <label
               htmlFor="search"
-              className="mb-2 text-sm font-medium text-gray-900 sr-only"
+              className="sr-only mb-2 text-sm font-medium text-gray-900"
             >
               Search
             </label>
@@ -71,20 +70,20 @@ export default function UserList() {
               <input
                 type="search"
                 id="search"
-                className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg  dark:bg-zinc-800 dark:text-zinc-300 "
+                className="block w-full rounded-lg border border-gray-300 p-4 ps-10 text-sm text-gray-900  dark:bg-zinc-800 dark:text-zinc-300"
                 placeholder="Search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 required
               />
-              <button className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">
+              <button className="absolute bottom-2.5 end-2.5 rounded-lg bg-blue-700 px-4 py-2 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300">
                 <Search2Icon />
               </button>
             </div>
           </div>
           <div className="rounded-lg bg-white p-1 dark:bg-zinc-800">
             {filteredUsers.length > 0 ? (
-              <VStack  spacing={4} align="stretch">
+              <VStack spacing={4} align="stretch">
                 {filteredUsers.map((user, index) => (
                   <Flex key={index}>
                     <Avatar src={user.avatar_path}>
