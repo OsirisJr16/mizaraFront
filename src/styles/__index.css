@@ -12,6 +12,13 @@
   h3 {
     font-family: "SuperTitle";
   }
+
+  body.dark {
+    background-color: #000;
+    transition: background-color 0.2s;
+    transition-duration: 0.2s;
+  }
+
   @font-face {
     font-family: "Nunito";
     font-style: normal;
@@ -28,7 +35,7 @@
     src: url(/src/assets/fonts/abeezee/ABeeZee-Regular.ttf) format("truetype");
   }
   *::-webkit-scrollbar-thumb {
-    background-color: rgb(124, 123, 123);
+    background-color: rgb(92, 92, 92);
     border-radius: 4px;
     opacity: 0.1;
   }
@@ -37,10 +44,30 @@
   }
   *::-webkit-scrollbar {
     padding: 20px 0px;
-    background: rgb(34, 34, 34);
+    background: rgb(212, 212, 212);
     width: 6px;
   }
   *::-webkit-scrollbar:hover {
     background-color: rgb(169, 172, 175);
+  }
+
+  body.dark {
+    background-color: #000;
+    transition: background-color 0.2s;
+    transition-duration: 0.2s;
+  }
+
+  body.dark *::-webkit-scrollbar-thumb {
+    background-color: rgb(92, 92, 92);
+    border-radius: 4px;
+    opacity: 0.1;
+  }
+  body.dark *::-webkit-scrollbar-corner {
+    border-radius: 20px;
+  }
+  body.dark *::-webkit-scrollbar {
+    padding: 20px 0px;
+    background: rgb(56, 56, 56);
+    width: 6px;
   }
 }

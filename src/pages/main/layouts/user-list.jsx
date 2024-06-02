@@ -38,6 +38,34 @@ const users = [
     device: "Mac",
     online: false,
   },
+  {
+    id: 5,
+    name: "Aina",
+    avatar_path: "./avatar.jpeg",
+    device: "Mac",
+    online: false,
+  },
+  {
+    id: 5,
+    name: "Aina",
+    avatar_path: "./avatar.jpeg",
+    device: "Mac",
+    online: false,
+  },
+  {
+    id: 5,
+    name: "Aina",
+    avatar_path: "./avatar.jpeg",
+    device: "Mac",
+    online: false,
+  },
+  {
+    id: 5,
+    name: "Aina",
+    avatar_path: "./avatar.jpeg",
+    device: "Mac",
+    online: false,
+  },
 ];
 
 export default function UserList() {
@@ -48,44 +76,43 @@ export default function UserList() {
   );
 
   return (
-    <div className="relative isolate pt-16 lg:px-8">
-      <div className="w-full rounded-lg bg-white p-4 shadow-lg">
-        <div className="mb-4 flex items-center">
+    <div className="relative pt-16 isolate lg:px-8">
+      <div className="w-full p-4 bg-white rounded-lg shadow-lg dark:bg-zinc-800">
+        <div className="flex items-center mb-4">
           <input
             type="text"
             placeholder="Recherche"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="flex-1 rounded-lg border border-gray-300 p-2 text-lg"
+            className="flex-1 p-2 text-lg border border-gray-300 rounded-lg outline-none dark:bg-zinc-800 dark:text-zinc-300 "
           />
-          <FaSearch className="ml-2 cursor-pointer text-gray-500 text-lg" />
+          <FaSearch className="ml-2 text-lg text-gray-500 cursor-pointer" />
         </div>
-        <div className="rounded-lg bg-white p-1">
+        <div className="max-h-[70vh] overflow-y-auto rounded-lg bg-white p-1 dark:bg-zinc-800">
           {filteredUsers.length > 0 ? (
             filteredUsers.map((user) => (
               <div
                 key={user.id}
-                className="relative mb-4 flex items-center space-x-4 rounded-lg bg-gray-100 p-2 shadow-sm flex-col md:flex-row"
+                className="relative flex flex-col items-center p-2 mb-4 space-x-4 bg-gray-100 rounded-lg shadow-sm dark:bg-zinc-700 md:flex-row"
               >
                 <div className="relative">
                   <div
-                    className={`absolute -right-1.5 -top-1 w-3 h-3 rounded-full ${
-                      user.online ? "bg-green-500" : "bg-gray-500"
-                    }`}
+                    className={`absolute -right-1.5 -top-1 size-3 rounded-full ${user.online ? "bg-green-500" : "bg-gray-500"
+                      }`}
                   ></div>
-                  <div className="flex w-10 h-10 items-center justify-center rounded-full bg-gray-300">
+                  <div className="flex items-center justify-center bg-gray-300 rounded-full size-10">
                     <img
                       src={user.avatar_path}
                       alt="Avatar"
-                      className="w-10 h-10 rounded-full"
+                      className="rounded-full size-10"
                     />
                   </div>
                 </div>
-                <div className="min-w-0 flex-1 text-center md:text-left">
-                  <h3 className="break-words text-lg font-medium">
+                <div className="flex-1 min-w-0 text-center md:text-left">
+                  <h3 className="text-lg font-medium break-words dark:text-zinc-200">
                     {user.name}
                   </h3>
-                  <p className="text-sm text-gray-500">{user.device}</p>
+                  <p className="text-sm text-gray-500 dark:text-zinc-400">{user.device}</p>
                 </div>
                 <div className="relative">
                   <button className="text-gray-500">
@@ -95,7 +122,7 @@ export default function UserList() {
               </div>
             ))
           ) : (
-            <div className="text-center text-red-700">No user found!</div>
+            <div className="text-center text-red-700 dark:text-zinc-200">No user found!</div>
           )}
         </div>
       </div>
