@@ -1,4 +1,5 @@
 import UserList from "../../layouts/user-list";
+import FileProgress from "../../../fileprogress/FileProgress"
 
 const home = () => {
     return (
@@ -8,8 +9,8 @@ const home = () => {
                     <div className="w-full max-w-md">
                         <UserList />
                     </div>
-                    <div className="p-8">
-                        <h1>Hello world</h1>
+                    <div>
+                        <FileProgress/>
                     </div>
                 </div>
             </main>
