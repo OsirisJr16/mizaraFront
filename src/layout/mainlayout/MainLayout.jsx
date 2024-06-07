@@ -1,6 +1,7 @@
 import Header from '../../pages/header/Header';
 import ListUser from '../../pages/listuser/ListUser';
 import Hello from '../../pages/hello/Hello';
+import FileProgress from '../../pages/fileprogress/FileProgress'
 
 const MainLayout = () => {
   return (
@@ -17,6 +18,7 @@ const MainLayout = () => {
 
           <div className="w-full max-w-md mt-4 md:mt-0 md:ml-5">
             <Hello /> 
+            <FileProgress/>
           </div>
         </div>
       </main>
